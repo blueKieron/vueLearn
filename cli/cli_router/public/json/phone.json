@@ -1,0 +1,42 @@
+[
+    {
+        "goodName":"小米10",
+        "img":"img/phone/phone1.jpg"
+    },
+    {
+        "goodName":"Iphone 11",
+        "img":"img/phone/phone2.jpg"
+    },
+    {
+        "goodName":"Iphone X",
+        "img":"img/phone/phone3.jpg"
+    },
+    {
+        "goodName":"HUAWEI P30",
+        "img":"img/phone/phone4.jpg"
+    },
+    {
+        "goodName":"荣耀V30 李现同款 5G",
+        "img":"img/phone/phone5.jpg"
+    },
+    {
+        "goodName":"realme 真我X50 6400万",
+        "img":"img/phone/phone6.jpg"
+    },
+    {
+        "goodName":"三星 Galaxy S10",
+        "img":"img/phone/phone7.jpg"
+    },
+    {
+        "goodName":"小米10 双模5G 骁龙865",
+        "img":"img/phone/phone8.jpg"
+    },
+    {
+        "goodName":"海信(Hisense) 阅读手机",
+        "img":"img/phone/phone9.jpg"
+    },
+    {
+        "goodName":"iQOO 3 12GB+128GB",
+        "img":"img/phone/phone10.jpg"
+    }
+]

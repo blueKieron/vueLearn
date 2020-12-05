@@ -1,0 +1,13 @@
+{
+  "name": "meet",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production ./src/main.js --output ./dist/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

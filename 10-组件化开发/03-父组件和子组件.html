@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id ="app">
+    <cpn2></cpn2>
+  </div>
+  <script src="../js/vue.js"></script>
+  <script>
+    //创建第一个组件(子组件)
+    const cpnC1=Vue.extend({
+      template:`
+        <div>
+          <h2>我是标题一</h2>
+          <p>我是内容11111111</p>
+        </div>`
+    })
+    //创建第二个组件(父组件)
+    const cpnC2=Vue.extend({
+      template:`
+        <div>
+          <h2>我是标题二</h2>
+          <p>我是内容22222222</p>
+          <cpn1></cpn1>
+        </div>`,
+      components: {
+        cpn1:cpnC1
+      }
+    })
+   //创建Vue实例,得到 ViewModel(根组件)
+   const vm = new Vue({
+    el: '#app',
+    data: {},
+    methods: {},
+    components: {
+      cpn2:cpnC2
+    }
+   });
+  </script>
+</body>
+
+</html>

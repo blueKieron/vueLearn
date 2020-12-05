@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id ="app">
+    <!-- 驼峰时用-替换 -->
+    <cpn :c-info="info"></cpn>
+  </div>
+  <template id="cpn">
+    <h2>{{cinfo}}</h2>
+  </template>
+  <script src="../js/vue.js"></script>
+  <script>
+    const cpn={
+      template:'#cpn',
+      props:{
+        cInfo:{
+          type:Object,
+          default(){
+            return {}
+          }
+        }
+      }
+    }
+   //创建Vue实例,得到 ViewModel
+   const vm = new Vue({
+    el: '#app',
+    data: {
+      info:{
+        name:'kobe',
+        age:42,
+        height:2.05
+      }
+    },
+    methods: {},
+    components: {
+      cpn
+    }
+   });
+  </script>
+</body>
+
+</html>

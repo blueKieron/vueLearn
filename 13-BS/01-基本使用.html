@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap{
+      height:300px;
+      background-color: beige;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="wrap">
+      <ul class="content">
+        <button class="btn">按钮</button>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+        <li>列表数据</li>
+      </ul>
+    </div>
+   
+  </div>
+  <script src="./bscroll.js"></script>
+  <script>
+    //默认情况下BScroll是不可以实时的监听滚动位置
+    //probe 侦测
+    //0，1都是不侦测实时的位置
+    //2在手指滚动的过程中侦测，手指离开后的惯性中不侦测
+    //3只要是滚动就侦测
+    const bscroll=new BScroll(document.querySelector('.wrap'),{
+      probeType:2,
+      //click为boolean值 只有为true时才能原生监听事件
+      click:true,
+      pullUpLoad:true
+    })
+
+    bscroll.on('scroll',(position)=>{
+      console.log(position)
+    })
+    bscroll.on('pullingUp',()=>{
+      console.log('上拉加载更多')
+      //发送网络请求，请求更多页的数据
+
+      //等数据请求完成，并且将新的数据展示出来后
+      
+      setTimeout(()=>{
+        bscroll.finishPullUp()
+      },2000)
+    })
+
+    document.querySelector('.btn').addEventListener('click',function(){
+      console.log('---');
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    //1、参数问题
+    //1.1 两个参数
+    const sum = (num1, num2) => {
+      return num1 + num2
+    }
+
+    //1.2 一个参数
+    const power = num => {
+      return num * num
+    }
+
+    //2、
+    //2.1 函数代码块中有多行代码时
+    const test = () => {
+      console.log('aaaaaaaaaaaaaaaaaaaa');
+      console.log('bbbbbbbbbbbbbbbbbbbb')
+    }
+    //2.2 函数代码块中只有一行代码时 执行代码并返回
+    const mul = (num1, num2) => num1 * num2
+    console.log(mul(20,30));
+  </script>
+</body>
+
+</html>

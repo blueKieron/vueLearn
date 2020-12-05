@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id ="app">
+    <cpn><span slot="center">title</span></cpn>
+  </div>
+  <template id="cpn">
+    <div>
+      <slot name="left"><span>左边</span></slot>
+      <slot name="center"><span>中间</span></slot>
+      <slot name="right"><span>右边</span></slot>
+      <slot></slot>
+    </div>
+  </template>
+  <script src="../js/vue.js"></script>
+  <script>
+   //创建Vue实例,得到 ViewModel
+   const vm = new Vue({
+    el: '#app',
+    components: {
+      cpn:{
+        template:'#cpn'
+      }
+    }
+   });
+  </script>
+</body>
+
+</html>

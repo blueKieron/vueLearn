@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id ="app">
+    <h1 v-if="score>=90">优秀</h1>
+    <h1 v-else-if="score>=80">良好</h1>
+    <h1 v-else-if="score>=60">及格</h1>
+    <h1 v-else>不及格</h1>
+  </div>
+  <script src="../js/vue.js"></script>
+  <script>
+   //创建Vue实例,得到 ViewModel
+   const vm = new Vue({
+    el: '#app',
+    data: {
+      score:90
+    },
+    methods: {}
+   });
+  </script>
+</body>
+
+</html>

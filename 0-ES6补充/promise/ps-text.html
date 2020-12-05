@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+   //参数 ->函数(resolve,reject)
+    //resolve,reject本身他们又是函数
+    // new Promise((resolve,reject)=>{
+    //   setTimeout(()=>{
+    //     resolve()
+    //   },2000)
+    // }).then(()=>{
+    //   console.log('hello world');
+    //   console.log('hello world');
+    //   console.log('hello world');
+
+    //   return new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //       resolve()
+    //     },2000)
+    //   })
+    // }).then(()=>{
+    //   console.log('hello vuejs');
+    //   console.log('hello vuejs');
+    //   console.log('hello vuejs');
+
+    //   return new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //       resolve()
+    //     },2000)
+    //   })
+    // }).then(()=>{
+    //   console.log('hello python');
+    //   console.log('hello python');
+    //   console.log('hello python');
+    // })
+
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve()
+      }, 2000)
+    }) 
+    // .then(res=>{
+    // //自己处理10行代码
+    // console.log(res,'啊啊啊')
+
+    //对结果进行第一次处理
+    // return new Promise((resolve,reject)=>{
+    //   //resolve(res+'111')
+    //   reject('err')
+    // })
+  // })
+        .then(()=>{
+        console.log('hello python2');
+        console.log('hello python');
+        console.log('hello python');
+      })
+        .then(()=>{
+          console.log('hello python3');
+          console.log('hello python');
+          console.log('hello python');
+        })
+
+        
+    </script>
+</body>
+</html>
